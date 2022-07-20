@@ -29,8 +29,7 @@ function signin() {
     if (!validatePin(pin)) {
         alert("numri PIN eshte i gabuar")
     }
-
-    else {
+    if (validateEmail(email) && validatePassword(password) && validateFullname(fullName) && validateNumber(number) && validatePin(pin)) {
         alert("cdo gje ne rregull")
     }
 }
@@ -178,13 +177,13 @@ var x = 0;
 
 function AddRow() {
 
-    var AddRown = document.getElementById("'show'");
+    var AddRown = document.getElementById('show');
     var NewRow = AddRown.insertRow(n);
 
-    list1[x] = document.getElementById("email1").value;
-    list2[x] = document.getElementById("password").value;
-    list3[x] = document.getElementById("fullName").value;
-    list4[x] = document.getElementById("number").value;
+    list1[x] = document.getElementById("fullName").value;
+    list2[x] = document.getElementById("number").value;
+    list3[x] = document.getElementById("email1").value;
+    list4[x] = document.getElementById("password").value;
     list5[x] = document.getElementById("pin").value;
 
     var cel1 = NewRow.insertCell(0);
