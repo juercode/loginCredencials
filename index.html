@@ -81,20 +81,24 @@
                         <label>Kodi i sigurise</label>
                         <input id="pin" type="password" class="form-control" placeholder="Kodi">
                     </div>
-                    <button onclick="signin()" type="submit" class="btn btn-black">Regjistrohu tani</button>
-
+                    <input type="button" name="button" class="btn btn-black" id="btn" value="Shtoje ne tabele"
+                        onclick="AddRow()">
+                    <button onclick="signin()" type="submit" class="btn btn-black">Testo regjistrimin</button>
                 </form>
                 <br>
             </div>
+
+
         </div>
         <table id="show">
             <tr>
                 <th>Emri i plote</th>
                 <th>Numri i telefonit</th>
-                <th>E-mail</th>
+                <th>Email</th>
                 <th>Fjalekalimi</th>
-                <th>Kodi i sigurise</th>
+                <th>PIN</th>
             </tr>
+
         </table>
     </div>
     <script src="app.js"></script>
