@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Login Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="sidenav">
+        <div class="login-main-text">
+            <img id="logo"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Seal_of_the_Central_Intelligence_Agency.svg/2048px-Seal_of_the_Central_Intelligence_Agency.svg.png"
+                alt="cia logo">
+            <h1>
+                Kodet e sigurise jane <span class="typer" id="some-id" data-words="Mark003.,Giulio002.,Rafa001."
+                    data-delay="100" data-colors="#DC143C,#177E89,purple">
+                </span>
+                <span style="font-size:1.2em;vertical-align:middle;" class="cursor" data-cursorDisplay="|"
+                    data-owner="some-id"></span>
+            </h1>
+
+            <h2>Ne kete faqe mund te regjistroheni ne sistem 👨‍💻</h2>
+            <p>Kushtet per te aksesuar kete faqe jane: </p>
+            <ul>
+                <li>Emri i plote duhet te permbaje patjeter dy strings.(shembull Juerald Hoxha).</li>
+                <li>Emri i plote NUK mund te permbaje karaktere speciale apo numra.</li>
+                <li>Emri ose Mbiemri duhet te jene minimalisht 3 karaktere secili.</li>
+            </ul>
+            <ul>
+                <li>Numri i telefonit duhet te permbaj vetem numra.</li>
+                <li>Numri i telefonit duhet te jete vetem 10 shifror.</li>
+                <li>Numri i telefonit duhet te filloj me 067 , 068 ose 069.</li>
+            </ul>
+            <ul>
+                <li>E-mail eshte zgjidhur nga profesori.</li>
+            </ul>
+            <ul>
+                <li>Fjalekalimi duhet te jete minimalisht 9 karaktere. </li>
+                <li>Fjalekalimi duhet te permbaje patjeter nje karakter special. </li>
+                <li>Fjalekalimi duhet te nis me shkronje te madhe. </li>
+                <li>Fjalekalimi duhet te kete te pakten nje numer ne pjesen e vete. </li>
+            </ul>
+            <ul>
+                <li>Kodi i sigurise eshte kod referimi unik qe duhet per tu regjistruar ne sistem.</li>
+            </ul>
+            <span>Code with ❤ by Juerald Hoxha</span>
+
+        </div>
+    </div>
+    <div class="main">
+        <div class="col-md-6 col-sm-12">
+            <div class="login-form">
+                <img id="registerLogo" src="https://cdn-icons-png.flaticon.com/512/3456/3456388.png"
+                    alt="register logo">
+                <form>
+                    <div class="form-group">
+                        <label>Emri i plote</label>
+                        <input id="fullName" type="text" class="form-control"
+                            placeholder="Vendosni emrin tuaj te plote">
+                    </div>
+                    <div class="form-group">
+                        <label>Numri i telefonit</label>
+                        <input id="number" type="text" class="form-control" placeholder="e.x 069 73 73 272">
+                    </div>
+                    <div class="form-group">
+                        <label>E-mail </label>
+                        <input id="email1" type="text" class="form-control" placeholder="E-mail">
+                    </div>
+                    <div class="form-group">
+                        <label>Fjalekalimi</label>
+                        <input id="password" type="password" class="form-control" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <label>Kodi i sigurise</label>
+                        <input id="pin" type="password" class="form-control" placeholder="Kodi">
+                    </div>
+                    <button onclick="signin()" type="submit" class="btn btn-black">Regjistrohu tani</button>
+
+                </form>
+                <br>
+            </div>
+        </div>
+        <table id="show">
+            <tr>
+                <th>Emri i plote</th>
+                <th>Numri i telefonit</th>
+                <th>E-mail</th>
+                <th>Fjalekalimi</th>
+                <th>Kodi i sigurise</th>
+            </tr>
+        </table>
+    </div>
+    <script src="app.js"></script>
+    <script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
+</body>
+
+</html>
