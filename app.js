@@ -5,6 +5,7 @@ function signin() {
     const number = document.getElementById("number").value
     const pin = document.getElementById("pin").value
 
+    var message = ""
     console.log(email)
     console.log(password)
     console.log(fullName)
@@ -12,32 +13,37 @@ function signin() {
     console.log(pin)
 
     if (!validateEmail(email)) {
-        alert("emaili nuk eshte i sakte")
+        message +="Emaili nuk eshte i sakte"
     }
 
     if (!validatePassword(password)) {
-        alert("passwordi nuk eshte i sakte")
+        message += "\nPasswordi nuk eshte i sakte"
     }
 
     if (!validateFullname(fullName)) {
-        alert("emer dhe mbiemer nuk eshte i sakte")
+        message += "\nEmer dhe mbiemer nuk eshte i sakte"
     }
 
     if (!validateNumber(number)) {
-        alert("numri telefonit nuk eshte i sakte")
+        message += "\nNumri telefonit nuk eshte i sakte"
     }
     if (!validatePin(pin)) {
-        alert("numri PIN eshte i gabuar")
+        message +=  "\nNumri PIN eshte i gabuar"
     }
     if (validateEmail(email) && validatePassword(password) && validateFullname(fullName) && validateNumber(number) && validatePin(pin)) {
 
         AddRow(email, password, fullName, number, pin)
-        document.getElementById("email1").value = '' 
+        document.getElementById("email1").value = ''
         document.getElementById("password").value = ''
         document.getElementById("fullName").value = ''
         document.getElementById("number").value = ''
         document.getElementById("pin").value = ''
     }
+    else
+    {
+        alert(message)
+    }
+
 }
 
 // funksioni qe ben validimin e e-mailit
