@@ -30,7 +30,13 @@ function signin() {
         alert("numri PIN eshte i gabuar")
     }
     if (validateEmail(email) && validatePassword(password) && validateFullname(fullName) && validateNumber(number) && validatePin(pin)) {
-        alert("cdo gje ne rregull")
+
+        AddRow(email, password, fullName, number, pin)
+        document.getElementById("email1").value = '' 
+        document.getElementById("password").value = ''
+        document.getElementById("fullName").value = ''
+        document.getElementById("number").value = ''
+        document.getElementById("pin").value = ''
     }
 }
 
@@ -175,16 +181,19 @@ var list5 = [];
 var n = 1;
 var x = 0;
 
-function AddRow() {
+function AddRow(email1, password1, fullName1, number1, pin1) {
 
+    if (email1 === undefined) {
+        alert("Luli e ka ne joge")
+    }
     var AddRown = document.getElementById('show');
     var NewRow = AddRown.insertRow(n);
 
-    list1[x] = document.getElementById("fullName").value;
-    list2[x] = document.getElementById("number").value;
-    list3[x] = document.getElementById("email1").value;
-    list4[x] = document.getElementById("password").value;
-    list5[x] = document.getElementById("pin").value;
+    list1[x] =fullName1 ///document.getElementById("fullName").value;
+    list2[x] = number1///document.getElementById("number").value;
+    list3[x] = email1///document.getElementById("email1").value;
+    list4[x] = password1///document.getElementById("password").value;
+    list5[x] = pin1///document.getElementById("pin").value;
 
     var cel1 = NewRow.insertCell(0);
     var cel2 = NewRow.insertCell(1);
